@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">VetMate</string>
+    <string name="default_web_client_id">128869853563-6fip73ltsr3udr7jgo5kc5pb0q0ebbjv.apps.googleusercontent.com</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_notes_available">No notes available</string>
+    <string name="no_notes">No notes</string>
+    <string name="add_note">Add Note</string>
+
+
 </resources>

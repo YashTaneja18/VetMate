@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Appointments Header -->
+            <TextView
+                android:text="Upcoming Appointments"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Appointments List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAppointments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Reminders Section Header with "More >" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/textRemindersTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Reminders"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textMoreReminders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More ➔"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <!-- Today's Reminders List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerReminders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_reminder_home"
+                android:orientation="horizontal"/>
+
+            <!-- Empty state for no reminders today -->
+            <TextView
+                android:id="@+id/textNoReminders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No reminders for today"
+                android:textAlignment="center"
+                android:padding="12dp"
+                android:textColor="@android:color/darker_gray"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

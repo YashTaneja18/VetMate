@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                app:contentScrim="@android:color/transparent"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+
+                <ImageView
+                    android:id="@+id/petImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_dog"
+                    android:contentDescription="Pet Image"
+                    android:fitsSystemWindows="true" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/backButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:navigationIcon="@drawable/ic_back"
+                    app:title=""
+                    app:navigationContentDescription="Back"
+                    app:layout_collapseMode="pin" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_marginTop="-60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp"
+                android:background="@drawable/pet_detail_layout">
+
+                <TextView
+                    android:id="@+id/petName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="20sp"/>
+
+                <TextView android:id="@+id/petBreed" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+                <TextView android:id="@+id/petSpecies" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+                <TextView android:id="@+id/petGender" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+                <TextView android:id="@+id/petAge" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+                <TextView android:id="@+id/petWeight" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+                <TextView android:id="@+id/petHeight" style="@style/DetailText" android:layout_marginBottom="10sp"/>
+
+                <Button
+                    android:id="@+id/btnEditPet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Pet"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnDeletePet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Pet"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <View android:layout_height="1dp" android:layout_width="match_parent" android:background="#CCC" android:layout_marginVertical="16dp" />
+
+                <Button
+                    android:id="@+id/btnHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treatment History" />
+
+                <Button
+                    android:id="@+id/btnViewNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Notes"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnViewReminders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reminders"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

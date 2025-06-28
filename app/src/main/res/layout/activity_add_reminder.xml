@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- Optional binding variables -->
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="?android:attr/dividerHorizontal"
+                android:showDividers="middle"
+                android:dividerPadding="8dp">
+
+                <!-- Select Pet -->
+                <TextView
+                    android:text="Pet"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/layoutSelectPet"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_input_selector"
+                    android:padding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/textSelectedPet"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Select Pet"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:src="@drawable/ic_arrow_drop_down"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+                </LinearLayout>
+
+                <!-- Title -->
+                <TextView
+                    android:text="Title"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="e.g. Give Deworming Medicine"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:inputType="textCapSentences" />
+
+                <!-- Description -->
+                <TextView
+                    android:text="Description"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Optional details"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:inputType="textCapSentences" />
+
+                <!-- Reminder Date & Time -->
+                <TextView
+                    android:text="Reminder Time"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/layoutSelectDateTime"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_input_selector"
+                    android:padding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/textSelectedDateTime"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Select date and time"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:src="@drawable/ic_calendar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- Reminder Type -->
+                <TextView
+                    android:text="Type"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerReminderType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_selector"
+                    android:spinnerMode="dropdown"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Save FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSaveReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:contentDescription="Save"
+            app:srcCompat="@drawable/checkmark"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

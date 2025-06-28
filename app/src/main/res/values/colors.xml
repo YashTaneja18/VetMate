@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+         <color name="black">#FF000000</color>
+         <color name="white">#FFFFFFFF</color>
+        <!-- Primary brand color (soft blue) -->
+        <color name="colorPrimary">#63A4FF</color>
+        <color name="colorPrimaryVariant">#1976D2</color>
+        <color name="colorOnPrimary">#FFFFFF</color>
+
+        <!-- Secondary accent color (soft coral) -->
+        <color name="colorSecondary">#FF9E80</color>
+        <color name="colorSecondaryVariant">#FF6E40</color>
+        <color name="colorOnSecondary">#FFFFFF</color>
+
+        <!-- Background and Surface colors -->
+        <color name="colorBackground">#F7F9FC</color> <!-- Very light background -->
+        <color name="colorSurface">#FFFFFF</color>
+        <color name="colorOnBackground">#2D3E50</color>
+        <color name="colorOnSurface">#2D3E50</color>
+
+        <!-- Error color -->
+        <color name="colorError">#D32F2F</color>
+        <color name="colorOnError">#FFFFFF</color>
+
+        <!-- Text colors -->
+        <color name="textPrimary">#1C2C4C</color>  <!-- Deep blue-gray -->
+        <color name="textSecondary">#6B7C93</color>  <!-- Muted blue-gray -->
+
+        <!-- Divider and border colors -->
+        <color name="dividerColor">#E0E0E0</color>
+        <color name="borderColor">#CBD5E0</color>
+
+        <!-- Neutral grays for disabled states -->
+        <color name="grayLight">#F0F0F0</color>
+        <color name="grayMedium">#BDBDBD</color>
+        <color name="grayDark">#757575</color>
 </resources>
